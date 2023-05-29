@@ -22,7 +22,8 @@ export DATABASE_CONNECTION_STRING='AccountEndpoint=https://cosmos-lingoai-dev.do
 ```
 
 ```bash
-cd swa-db-connections && dab start --config staticwebapp.database.config.json
+cd swa-db-connections
+dab start --config staticwebapp.database.config.json
 ```
 
 ### GUI での GraphQL 開発

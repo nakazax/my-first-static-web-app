@@ -25,7 +25,9 @@
 				"ms-azuretools.vscode-azurestaticwebapps",
 				"ms-dotnettools.csharp",
 				"ms-python.python",
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"GitHub.copilot-nightly",
+				"GraphQL.vscode-graphql"
 			]
 		}
 	},

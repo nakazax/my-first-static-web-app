@@ -1,6 +1,24 @@
+"""
+ユーザーの会話履歴を表すモデル
+"""
 type ChatHistory @model {
+  """
+  ユーザーID (PK)
+  """
+  userId: String
+
+  """
+  会話の終了日時 (id)
+  """
   id: ID
-  chatEndDateTime: String
+  
+  """
+  会話のサマリー
+  """
   chatSummary: String
+  
+  """
+  会話の内容
+  """
   chatContent: String
 }
