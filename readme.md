@@ -1,7 +1,31 @@
-# Vanilla JavaScript App
+# my-first-static-web-app
+Static Web Apps と Data API Builder のテスト用のリポジトリ
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build JavaScript apps in minutes. Use this repo with the [quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to build and customize a new static site.
+## Data API Builder のローカル実行方法
+- 参考
+    - https://learn.microsoft.com/ja-jp/azure/data-api-builder/data-api-builder-cli
+    - https://learn.microsoft.com/ja-jp/azure/data-api-builder/get-started/get-started-azure-cosmos-db
 
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+### Static Web Apps CLI インストール
+```bash
+npm install
+```
 
-This repo has a dev container. This means if you open it inside a [GitHub Codespace](https://github.com/features/codespaces), or using [VS Code with the remote containers extension](https://code.visualstudio.com/docs/remote/containers), it will be opened inside a container with all the dependencies already installed.
+### Data API Builder のインストール
+```bash
+dotnet tool install --global Microsoft.DataApiBuilder"
+```
+
+### Cosmso DB の接続文字列を環境変数に設定
+```bash
+export DATABASE_CONNECTION_STRING='AccountEndpoint=https://cosmos-lingoai-dev.documents.azure.com:443/;AccountKey=xxx==;'
+```
+
+```bash
+cd swa-db-connections && dab start --config staticwebapp.database.config.json
+```
+
+### GUI での GraphQL 開発
+以下にアクセス、SSL証明書に関するエラーが出るが無視して問題ない
+
+https://127.0.0.1:5001/graphql/

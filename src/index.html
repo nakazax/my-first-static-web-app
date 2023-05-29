@@ -15,10 +15,12 @@
 
     const query = `
       {
-        people {
+        chatHistories {
           items {
+            userId
             id
-            Name
+            chatSummary
+            chatContent
           }
         }
       }`;
@@ -30,14 +32,12 @@
       body: JSON.stringify({ query: query })
     });
     const result = await response.json();
-    console.table(result.data.people.items);
+    console.table(result.data.chatHistories.items);
   }
 
   // ID で取得する
   async function get() {
-
     const id = '1';
-
     const gql = `
       query getById($id: ID!) {
         person_by_pk(id: $id) {

@@ -3,7 +3,7 @@
   "data-source": {
     "database-type": "cosmosdb_nosql",
     "options": {
-      "database": "MyTestPersonDatabase",
+      "database": "LingoAiDb",
       "schema": "staticwebapp.database.schema.gql"
     },
     "connection-string": "@env('DATABASE_CONNECTION_STRING')"
@@ -15,7 +15,7 @@
       "path": "/graphql"
     },
     "host": {
-      "mode": "production",
+      "mode": "development",
       "cors": {
         "origins": ["http://localhost:4280"],
         "allow-credentials": false
@@ -26,8 +26,8 @@
     }
   },
   "entities": {
-    "Person": {
-      "source": "MyTestPersonContainer",
+    "ChatHistory": {
+      "source": "ChatHistories",
       "permissions": [
         {
           "actions": ["*"],

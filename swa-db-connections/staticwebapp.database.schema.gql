@@ -1,4 +1,6 @@
-type Person @model {
+type ChatHistory @model {
   id: ID
-  Name: String
+  chatEndDateTime: String
+  chatSummary: String
+  chatContent: String
 }
